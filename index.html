@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スルリム | あなたのダイエットを代行します</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2040&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center right;
+        }
+        @media (max-width: 768px) {
+            .hero-bg {
+                background-position: center;
+            }
+        }
+        .text-border-green {
+            position: relative;
+            display: inline-block;
+        }
+        .text-border-green::after {
+            content: "";
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background-color: rgba(0, 150, 108, 0.2);
+            z-index: -1;
+        }
+        .brand-accent {
+            color: #00966C;
+        }
+        .bg-brand-accent {
+            background-color: #00966C;
+        }
+        
+        /* 比較表のモダンデザイン */
+        .comparison-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            table-layout: fixed;
+        }
+        .sururim-column {
+            background: #ffffff;
+            border-left: 4px solid #00966C !important;
+            border-right: 4px solid #00966C !important;
+            box-shadow: 0 20px 40px -15px rgba(0, 150, 108, 0.4);
+            position: relative;
+            z-index: 20;
+        }
+        .sururim-header {
+            border-top: 4px solid #00966C !important;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+            background: linear-gradient(to bottom, #00966C, #008560);
+        }
+        .sururim-footer {
+            border-bottom: 4px solid #00966C !important;
+            border-bottom-left-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
+        }
+        .row-label {
+            width: 120px;
+            background-color: #f8fafc;
+            color: #1e293b;
+            font-weight: 900;
+            font-size: 0.85rem;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .other-cell {
+            background-color: #ffffff;
+            border-bottom: 1px solid #f1f5f9;
+            color: #475569;
+        }
+        .cross-mark { color: #cbd5e1; }
+        .check-mark { color: #00966C; font-weight: 900; }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md px-4 py-3 md:px-8 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <div class="bg-[#00966C] text-white px-4 py-1.5 rounded-full text-sm font-bold flex items-center shadow-sm">
+                    <span class="mr-2 text-lg tracking-widest">SURURIMU</span>
+                    <span class="text-[10px] md:text-xs opacity-90 border-l border-white/30 pl-2">努力する時代は終わり 超次世代痩身</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-bold text-gray-700">
+                <a href="#" class="hover:text-[#00966C] transition-colors">代行の根拠</a>
+                <a href="#" class="hover:text-[#00966C] transition-colors">医療が選ばれる理由</a>
+                <button class="bg-[#00966C] text-white px-6 py-2 rounded-full shadow-md active:scale-95 transition-all">無料相談</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden hero-bg">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 w-full">
+            <div class="max-w-2xl">
+                <div class="mb-10">
+                    <h1 class="text-4xl md:text-6xl font-black leading-tight mb-4">
+                        <span class="text-[#00966C]">「スルリム」</span>が<br>
+                        あなたのダイエットを<br>
+                        <span class="text-border-green">代行します</span>
+                    </h1>
+                    <div class="inline-block bg-white/60 backdrop-blur px-6 py-3 rounded-xl border-l-4 border-[#00966C]">
+                        <p class="text-xl md:text-3xl font-black text-[#00966C]">「あなたは、いつも通り過ごすだけ。」</p>
+                    </div>
+                </div>
+                <div class="mb-12">
+                    <a href="#" class="inline-block bg-[#00966C] text-white text-lg md:text-xl font-bold px-10 py-5 rounded-full shadow-xl hover:bg-[#007b58] transform hover:-translate-y-1 transition-all">まずはLINE登録で自分のタイプ診断</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-white ring-1 ring-black/5">
+                <div class="relative h-[500px] md:h-[650px]">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop" alt="施術風景" class="w-full h-full object-cover">
+                    <div class="absolute top-0 right-0 bg-brand-accent text-white px-8 py-3 text-xl md:text-4xl font-black shadow-lg italic">マッコイ斎藤さんが</div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 bg-gradient-to-t from-black/60 to-transparent text-white">
+                        <div class="space-y-6">
+                            <div class="inline-block bg-white px-8 py-4 shadow-2xl rounded-lg"><h2 class="text-2xl md:text-5xl font-black text-gray-900 tracking-tighter">初めてのスルリム体験！</h2></div>
+                            <div class="bg-white/95 p-8 md:p-10 shadow-2xl inline-block border-l-[12px] border-brand-accent rounded-r-2xl transform -rotate-1">
+                                <p class="text-xl md:text-3xl font-black mb-2 text-gray-700 leading-none">たった1回の施術で約</p>
+                                <div class="flex items-baseline">
+                                    <span class="text-7xl md:text-[10rem] font-black brand-accent leading-none tracking-tighter">-6.5</span>
+                                    <span class="text-4xl md:text-7xl font-black brand-accent ml-2">kg</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="py-24 bg-white relative">
+        <div class="max-w-5xl mx-auto px-4 relative z-10">
+            <!-- Impactful Intro -->
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-5xl font-black tracking-tighter text-slate-900 leading-tight">
+                    6.5kg（<span class="text-red-600 font-black">46,800kcal</span>）を<br class="md:hidden">消費するために必要なこと
+                </h3>
+            </div>
+
+            <!-- Redesigned Comparison Table -->
+            <div class="overflow-x-auto pb-10">
+                <table class="w-full comparison-table">
+                    <thead>
+                        <tr>
+                            <th class="p-4 w-[120px] bg-transparent"></th>
+                            <th class="p-6 text-center text-slate-400 font-black text-sm border-b uppercase tracking-widest">Gym</th>
+                            <th class="p-6 text-center text-slate-400 font-black text-sm border-b uppercase tracking-widest">Running</th>
+                            <th class="p-6 text-center text-slate-400 font-black text-sm border-b uppercase tracking-widest">Surgery</th>
+                            <th class="p-6 text-center sururim-column sururim-header text-white shadow-xl">
+                                <div class="inline-block bg-yellow-400 text-black text-[10px] px-3 py-1 rounded-full mb-3 font-black shadow-sm uppercase tracking-wider">Solution</div>
+                                <div class="text-2xl font-black leading-none italic tracking-tighter">スルリム</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <!-- row: 必要な時間 -->
+                        <tr class="group">
+                            <td class="p-6 row-label border-b">必要な時間</td>
+                            <td class="p-6 text-center other-cell border-b">120時間〜<br><span class="text-[11px] font-bold text-slate-400">(4〜6ヶ月)</span></td>
+                            <td class="p-6 text-center other-cell border-b">100時間〜<br><span class="text-[11px] font-bold text-slate-400">(4〜6ヶ月)</span></td>
+                            <td class="p-6 text-center other-cell border-b font-bold text-slate-700">手術3時間<br><span class="text-[11px] opacity-60">+DT1ヶ月</span></td>
+                            <td class="p-6 text-center sururim-column border-b border-emerald-50">
+                                <div class="text-2xl font-black brand-accent tracking-tighter">最短15分</div>
+                                <div class="text-[10px] text-emerald-600/60 font-bold italic">圧倒的タイパ</div>
+                            </td>
+                        </tr>
+                        <!-- row: コスト -->
+                        <tr class="group">
+                            <td class="p-6 row-label border-b">コスト</td>
+                            <td class="p-6 text-center other-cell border-b font-bold text-slate-600">約15万円</td>
+                            <td class="p-6 text-center other-cell border-b font-bold text-slate-600">約2万円</td>
+                            <td class="p-6 text-center other-cell border-b font-bold text-slate-700 italic">約80万円〜</td>
+                            <td class="p-6 text-center sururim-column border-b border-emerald-50 bg-emerald-50/10">
+                                <div class="text-2xl font-black brand-accent tracking-tight font-black">税込9,800円</div>
+                                <div class="text-[10px] text-emerald-600/60 font-bold mt-1">努力を買う価格</div>
+                            </td>
+                        </tr>
+                        <!-- row: 維持 -->
+                        <tr class="group">
+                            <td class="p-6 row-label border-b">維持・継続性</td>
+                            <td class="p-6 text-center other-cell border-b text-xs font-black text-red-500 italic">辞めるとリバウンド</td>
+                            <td class="p-6 text-center other-cell border-b text-xs font-black text-red-500 italic">辞めるとリバウンド</td>
+                            <td class="p-6 text-center other-cell border-b text-xs text-slate-700 font-bold">生活習慣次第で<br>再発のリスク</td>
+                            <td class="p-6 text-center sururim-column border-b border-emerald-50">
+                                <div class="font-black brand-accent text-lg leading-tight">医学的に<br>リバウンド防止</div>
+                            </td>
+                        </tr>
+                        <!-- row: リスク -->
+                        <tr class="group">
+                            <td class="p-6 row-label border-b-0">主なリスク</td>
+                            <td class="p-6 text-center other-cell border-b-0 text-xs font-bold text-slate-500">挫折・怪我・幽霊会員</td>
+                            <td class="p-6 text-center other-cell border-b-0 text-xs font-bold text-slate-500">膝の故障・挫折</td>
+                            <td class="p-6 text-center other-cell border-b-0 text-red-500 font-black text-xs">麻酔事故・凹凸</td>
+                            <td class="p-6 text-center sururim-column sururim-footer">
+                                <div class="text-xl font-black brand-accent tracking-tight">1日ダウンタイム</div>
+                                <div class="text-[10px] text-slate-400 font-bold mt-1 uppercase">Professional Care</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="mt-20 text-center">
+                <p class="text-2xl font-black text-slate-800 mb-8 tracking-tighter">
+                    次は、あなたが「何もしない」番です。
+                </p>
+                <a href="#" class="inline-flex items-center justify-center bg-brand-accent text-white text-xl md:text-2xl font-black px-16 py-6 rounded-full shadow-[0_20px_50px_-15px_rgba(0,150,108,0.5)] hover:scale-105 active:scale-95 transition-all group">
+                    <span>LINEで無料タイプ診断を受ける</span>
+                    <svg class="w-6 h-6 ml-4 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 py-16 px-4 text-center text-slate-500 text-xs">
+        <div class="mb-4 font-black tracking-widest text-slate-400">SURURIMU</div>
+        <p class="mb-2">超次世代痩身ダイエット代行サービス「スルリム」</p>
+        <p>&copy; 2026 SURURIMU Inc. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
